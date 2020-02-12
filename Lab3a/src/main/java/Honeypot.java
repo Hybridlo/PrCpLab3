@@ -1,5 +1,3 @@
-import java.util.concurrent.Semaphore;
-
 public class Honeypot {
     private Semaphore gulps;
     private int gulpsAmount;
@@ -21,7 +19,7 @@ public class Honeypot {
 
     synchronized void takeHoney() throws InterruptedException {
         wait();
-        gulps.release(gulpsAmount);
+        gulps.releaseAll();
         System.out.println("Honeypot drained");
     }
 
