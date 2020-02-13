@@ -1,10 +1,8 @@
 public class Honeypot {
     private Semaphore gulps;
-    private int gulpsAmount;
 
     Honeypot(int gulps) {
         this.gulps = new Semaphore(gulps);
-        this.gulpsAmount = gulps;
     }
 
     synchronized void giveHoney() throws InterruptedException {

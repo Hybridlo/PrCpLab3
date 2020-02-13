@@ -11,7 +11,7 @@ public class Semaphore {
         permits++;
     }
 
-    public synchronized void releaseAll() throws InterruptedException {
+    public synchronized void releaseAll() {
         permits = 0;
     }
 
